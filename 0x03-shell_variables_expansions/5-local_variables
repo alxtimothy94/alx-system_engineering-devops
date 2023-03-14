@@ -1,2 +1,2 @@
 #!/bin/bash
-declare -p; printenv; declare -F
+compgen -A variable | while read var; do declare -p "$var" 2>/dev/null || echo "$var=$(eval echo \$$var)"; done
