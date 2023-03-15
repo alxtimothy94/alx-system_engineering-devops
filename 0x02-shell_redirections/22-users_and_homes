@@ -1,2 +1,2 @@
 #!/bin/bash
-ls -l > /dev/pts/37
+cut -d":" --fields=1,6 /etc/passwd | sort
